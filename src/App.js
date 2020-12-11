@@ -13,8 +13,8 @@ const App = () => {
                 <Nav />
                 <Switch>
                     <Route path="/playground" exact component={Home} />
-                    <Route path="/playground/about" component={About} />
-                    <Route path="/playground/monsters" exact component={Monsters} />
+                    <Route path="/about" component={About} />
+                    <Route path="/monsters" exact component={Monsters} />
                 </Switch>
             </div>
         </Router>
