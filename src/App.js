@@ -1,17 +1,23 @@
 import React from 'react';
-import { BrowserRoute as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
 import Nav from './components/Nav';
 import About from './components/About';
 import Shop from './components/Shop';
+import Home from './components/Home';
 
 const App = () => {
     return (
-        <div className="App">
-            <Nav />
-            <About />
-            <Shop />
-        </div>
+        <Router>
+            <div className="App">
+                <Nav />
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/shop" component={Shop} />
+                </Switch>
+            </div>
+        </Router>
     );
 }
 
