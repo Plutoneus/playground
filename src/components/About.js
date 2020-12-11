@@ -4,7 +4,7 @@ import '../index.css';
 const About = () => {
   return (
     <div>
-        About
+        About deez
     </div>
   )
 }

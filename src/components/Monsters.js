@@ -17,7 +17,7 @@ const Description = (props) => {
             {
                 showResults ?
                 <Results desc={props.desc}/> :
-                null
+                <Results style={{display: 'none'}}/>
             }
         </div>
     );
