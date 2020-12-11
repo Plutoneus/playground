@@ -7,20 +7,27 @@ const Description = (props) => {
 
     const onDetailsClick = () => setShowResults(!showResults)
 
+    useEffect(() => {
+        setShowResults();
+    }, []);
+
     return (
         <div>
             <input type="submit" value={showResults ? "-" : "+"} onClick={onDetailsClick} />
-            { showResults ? <Results desc={props.desc}/> : null }
+            {
+                showResults ?
+                <Results desc={props.desc}/> :
+                null
+            }
         </div>
     );
 }
 
-// Can I clean this?
 const Results = (props) => (
-    <div id="results" className="monster-desc">
+    <div id="results">
         {props.desc}
     </div>
-)
+);
 
 const Monsters = () => {
 
@@ -40,12 +47,17 @@ const Monsters = () => {
 
     return (
         <div>
-            {items.map(item => (
-                <div>
-                    <h1>{item.name}</h1>
-                    <Description desc={item.description}/>
-                </div>
-            ))}
+            <header className="section-header">
+                <h1>Monsters</h1>
+            </header>
+            <div className="monster-section">
+                {items.map(item => (
+                    <div className="monster-card">
+                        <h1>{item.name}</h1>
+                        <Description desc={item.description}/>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Ubuntu';
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -8,8 +8,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    background: #9f5f80;
-    color: #ff8e71;
+    background: #583d72;
+    color: #ffba93;
 }
 
 .nav-links {
@@ -23,4 +23,26 @@ nav {
 .nav-link {
     text-decoration: none;
     color: #ff8e71;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+}
+
+.monster-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background: #583d72;
+}
+
+.monster-card {
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0.5em auto;
+    padding: 2em;
+    background: #ffba93;
+    transition: all 0.3s ease;
 }
