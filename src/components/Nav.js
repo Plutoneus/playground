@@ -5,14 +5,14 @@ import '../index.css';
 const Nav = () => {
     return (
         <nav>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/playground">
                 <h3>Logo</h3>
             </Link>
             <ul className="nav-links">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" to="/playground/about">
                     <li>About</li>
                 </Link>
-                <Link className="nav-link" to="/monsters">
+                <Link className="nav-link" to="/playground/monsters">
                     <li>Monsters</li>
                 </Link>
             </ul>
