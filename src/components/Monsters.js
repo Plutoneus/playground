@@ -52,7 +52,11 @@ const Monsters = () => {
             </header>
             <div className="monster-section">
                 {items.map(item => (
-                    <div className="monster-card">
+                    <div style={{
+                        backgroundImage:
+                        `url(https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/gthumbnails/mhw-${item.name.toLowerCase().replace(/ /g,'_')}_icon.png)`
+                    }}
+                    className="monster-card">
                         <h1>{item.name}</h1>
                         <Description desc={item.description}/>
                     </div>
