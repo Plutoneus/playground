@@ -51,15 +51,23 @@ const Monsters = () => {
                 <h1>Monsters</h1>
             </header>
             <div className="monster-section">
+
+
+
                 {items.map(item => (
-                    <div style={{
-                        backgroundImage:
-                        `url(https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/gthumbnails/mhw-${item.name.toLowerCase().replace(/ /g,'_')}_icon.png)`
-                    }}
-                    className="monster-card">
-                        <h1>{item.name}</h1>
-                        <Description desc={item.description}/>
-                    </div>
+                    <span className="hover-text" title={"Elements: " + (
+                        (item.elements.length != 0) ? item.elements : "No element"
+                    )}>
+                        <div style={{
+                            backgroundImage:
+                            `url(https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/gthumbnails/mhw-${item.name.toLowerCase().replace(/ /g,'_')}_icon.png)`
+                        }}
+
+                        className="monster-card">
+                            <h1>{item.name}</h1>
+                            <Description desc={item.description}/>
+                        </div>
+                    </span>
                 ))}
             </div>
         </div>
