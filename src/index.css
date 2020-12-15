@@ -21,7 +21,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    list-style: none;
 }
 
 .nav-link {
@@ -29,6 +28,7 @@ nav {
     border: 1px solid black;
     padding: 1em;
     text-decoration: none;
+    list-style: none;
     text-align: center;
     color: #e6e6e6;
     transition: all 0.3s ease;
