@@ -31,6 +31,11 @@ const Results = (props) => (
 
 const Monsters = () => {
 
+    // style={{
+    //     backgroundImage:
+    //     `url(https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/gthumbnails/mhw-${item.name.toLowerCase().replace(/ /g,'_')}_icon.png)`
+    // }}
+
     useEffect(() => {
         fetchItems();
     }, []);
@@ -58,12 +63,7 @@ const Monsters = () => {
                     <span className="hover-text" title={"Elements: " + (
                         (item.elements.length != 0) ? item.elements : "No element"
                     )}>
-                        <div style={{
-                            backgroundImage:
-                            `url(https://monsterhunterworld.wiki.fextralife.com/file/Monster-Hunter-World/gthumbnails/mhw-${item.name.toLowerCase().replace(/ /g,'_')}_icon.png)`
-                        }}
-
-                        className="monster-card">
+                        <div className="monster-card">
                             <h1>{item.name}</h1>
                             <Description desc={item.description}/>
                         </div>
