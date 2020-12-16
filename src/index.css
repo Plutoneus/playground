@@ -9,7 +9,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 2vh;
     height: auto;
     background: #03506f;
     color: #c5a880;
@@ -17,7 +16,7 @@ nav {
 }
 
 .nav-links {
-    width: 40%;
+    width: 50%;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -25,12 +24,12 @@ nav {
 }
 
 .nav-link {
-    height: inherit;
+    height: 1.5em;
     /* border-bottom: 2px solid black; */
-    padding: 1em;
+    padding: 1em 1em;
     text-decoration: none;
     list-style: none;
-    text-align: center;
+    justify-content: center;
     color: #e6e6e6;
     transition: all 0.3s ease;
 }
@@ -78,6 +77,5 @@ nav {
     transition: all 0.3s ease;
 }
 
-.fa-home {
-    font-size: 2em;
+.fa-cheese {
 }
